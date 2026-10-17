@@ -1,0 +1,10 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'build/time'
+relocations:
+  - { offset: 0x2849F, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0xC26E0, symBinAddr: 0x10000A1A0, symSize: 0x0 }
+  - { offset: 0x28D6A, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_time.cpp, symObjAddr: 0x3ED8, symBinAddr: 0x100001CD8, symSize: 0x24 }
+  - { offset: 0x28D82, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x3E9C, symBinAddr: 0x100001C9C, symSize: 0x3C }
+  - { offset: 0x28DA1, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x44, symBinAddr: 0x100000884, symSize: 0x13D0 }
+  - { offset: 0x28E51, size: 0x8, addend: 0x0, symName: __ZSt3absx, symObjAddr: 0x0, symBinAddr: 0x100000840, symSize: 0x44 }
+...

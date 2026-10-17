@@ -1,29 +1,113 @@
 {
+    "version": "2.0.0",
     "tasks": [
         {
-            "type": "cppbuild",
-            "label": "C/C++: clang++ сборка активного файла",
-            "command": "/usr/bin/clang++",
+            "label": "mkdir-build",
+            "type": "shell",
+            "command": "mkdir",
             "args": [
-                "-fcolor-diagnostics",
-                "-fansi-escape-codes",
-                "-g",
-                "${file}",
-                "-o",
-                "${fileDirname}/${fileBasenameNoExtension}"
+                "-p",
+                "build"
             ],
             "options": {
                 "cwd": "${fileDirname}"
             },
-            "problemMatcher": [
-                "$gcc"
+            "problemMatcher": []
+        },
+        {
+            "label": "run-release",
+            "type": "shell",
+            "command": "/opt/homebrew/bin/g++-16",
+            "args": [
+                "-std=c++20",
+                "-O2",
+                "-DNDEBUG",
+                "-Wall",
+                "-Wextra",
+                "-Wshadow",
+                "${fileBasename}",
+                "-o",
+                "build/${fileBasenameNoExtension}",
+                "&&",
+                "./build/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "dependsOn": [
+                "mkdir-build"
             ],
             "group": {
                 "kind": "build",
                 "isDefault": true
             },
-            "detail": "Задача создана отладчиком."
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "focus": true,
+                "echo": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Сборка + запуск (release)"
+        },
+        {
+            "label": "run-debug",
+            "type": "shell",
+            "command": "/opt/homebrew/bin/g++-16",
+            "args": [
+                "-std=c++20",
+                "-O0",
+                "-g",
+                "-D_GLIBCXX_DEBUG",
+                "-fsanitize=address,undefined",
+                "-fno-omit-frame-pointer",
+                "-Wall",
+                "-Wextra",
+                "-Wshadow",
+                "-Wconversion",
+                "-Wsign-compare",
+                "${fileBasename}",
+                "-o",
+                "build/${fileBasenameNoExtension}",
+                "&&",
+                "./build/${fileBasenameNoExtension}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "dependsOn": [
+                "mkdir-build"
+            ],
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "focus": true,
+                "echo": true
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "detail": "Сборка + запуск с максимальными проверками"
+        },
+        {
+            "label": "run-tests",
+            "type": "shell",
+            "command": "chmod +x check.sh && ./check.sh",
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared",
+                "clear": true,
+                "focus": true
+            },
+            "problemMatcher": []
         }
-    ],
-    "version": "2.0.0"
+    ]
 }
