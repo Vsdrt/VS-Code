@@ -26,7 +26,7 @@ int main() {
     vector<int> data{};
     cin >> n;
 
-    for (int i = 1; i <= n; i ++){
+    for (int i = 1; i <= n; i++) {
         cin >> x;
         data.push_back(x);
     }
