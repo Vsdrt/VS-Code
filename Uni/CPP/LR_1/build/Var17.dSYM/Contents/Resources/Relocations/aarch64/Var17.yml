@@ -1,0 +1,20 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'build/Var17'
+relocations:
+  - { offset: 0x773D, size: 0x8, addend: 0x0, symName: __ZStL8__ioinit, symObjAddr: 0x3D880, symBinAddr: 0x100009B40, symSize: 0x0 }
+  - { offset: 0x7887, size: 0x8, addend: 0x0, symName: __GLOBAL__sub_I_Var17.cpp, symObjAddr: 0x3300, symBinAddr: 0x100001A54, symSize: 0x24 }
+  - { offset: 0x789E, size: 0x8, addend: 0x0, symName: __Z41__static_initialization_and_destruction_0v, symObjAddr: 0x32C4, symBinAddr: 0x100001A18, symSize: 0x3C }
+  - { offset: 0x78BC, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x820, symBinAddr: 0x100001060, symSize: 0x970 }
+  - { offset: 0x7943, size: 0x8, addend: 0x0, symName: __ZSt4sqrtf, symObjAddr: 0x7FC, symBinAddr: 0x10000103C, symSize: 0x24 }
+  - { offset: 0x796B, size: 0x8, addend: 0x0, symName: __ZSt3powff, symObjAddr: 0x7D0, symBinAddr: 0x100001010, symSize: 0x2C }
+  - { offset: 0x79A3, size: 0x8, addend: 0x0, symName: __ZSt4fabsf, symObjAddr: 0x7B4, symBinAddr: 0x100000FF4, symSize: 0x1C }
+  - { offset: 0x79CA, size: 0x8, addend: 0x0, symName: __ZSt12setprecisioni, symObjAddr: 0x7A0, symBinAddr: 0x100000FE0, symSize: 0x14 }
+  - { offset: 0x79F1, size: 0x8, addend: 0x0, symName: __ZSt5fixedRSt8ios_base, symObjAddr: 0x654, symBinAddr: 0x100000E94, symSize: 0x14C }
+  - { offset: 0x7A28, size: 0x8, addend: 0x0, symName: __ZNSt8ios_base4setfESt13_Ios_FmtflagsS0_, symObjAddr: 0x358, symBinAddr: 0x100000B98, symSize: 0x2FC }
+  - { offset: 0x7A88, size: 0x8, addend: 0x0, symName: __ZStaNRSt13_Ios_FmtflagsS_, symObjAddr: 0x1D8, symBinAddr: 0x100000A18, symSize: 0x180 }
+  - { offset: 0x7ABE, size: 0x8, addend: 0x0, symName: __ZStoRRSt13_Ios_FmtflagsS_, symObjAddr: 0x58, symBinAddr: 0x100000898, symSize: 0x180 }
+  - { offset: 0x7AF4, size: 0x8, addend: 0x0, symName: __ZStcoSt13_Ios_Fmtflags, symObjAddr: 0x40, symBinAddr: 0x100000880, symSize: 0x18 }
+  - { offset: 0x7B1B, size: 0x8, addend: 0x0, symName: __ZStorSt13_Ios_FmtflagsS_, symObjAddr: 0x20, symBinAddr: 0x100000860, symSize: 0x20 }
+  - { offset: 0x7B51, size: 0x8, addend: 0x0, symName: __ZStanSt13_Ios_FmtflagsS_, symObjAddr: 0x0, symBinAddr: 0x100000840, symSize: 0x20 }
+...
